@@ -28,49 +28,39 @@ def lambda_handler(event, context):
 Auto tune it!
 
 ```
-$ ./lambda-tuna.py --arn "FUNCTION_ARN" --maxi 5
-Λ🐟  FUNCTION_ARN
-Λ🐟  Starting at minimum
-Λ🐟  FUNCTION_ARN tuned to 128
-Λ🐟  0 53/128 MB 25.15 ms
-Λ🐟  1 53/128 MB 58.67 ms
-Λ🐟  2 53/128 MB 47.37 ms
-Λ🐟  3 53/128 MB 42.19 ms
-Λ🐟  4 53/128 MB 56.8 ms
-Λ🐟  Memory (max/cfg): 53/128 MB
-Λ🐟  Duration (avg/best): 46/46 ms
-Λ🐟  Up memory 128+71=199 MB
-Λ🐟  FUNCTION_ARN tuned to 199
-Λ🐟  0 53/199 MB 25.23 ms
-Λ🐟  1 53/199 MB 17.74 ms
-Λ🐟  2 53/199 MB 22.88 ms
-Λ🐟  3 53/199 MB 28.58 ms
-Λ🐟  4 53/199 MB 27.36 ms
-Λ🐟  Memory (max/cfg): 53/199 MB
-Λ🐟  Duration (avg/best): 24/46 ms
-Λ🐟  Improved in 22(47%) >? 10%
-Λ🐟  Up memory 199+89=288 MB
-Λ🐟  FUNCTION_ARN tuned to 288
-Λ🐟  0 53/288 MB 8.42 ms
-Λ🐟  1 53/288 MB 20.74 ms
-Λ🐟  2 53/288 MB 4.15 ms
-Λ🐟  3 53/288 MB 3.77 ms
-Λ🐟  4 53/288 MB 15.24 ms
-Λ🐟  Memory (max/cfg): 53/288 MB
-Λ🐟  Duration (avg/best): 10/24 ms
-Λ🐟  Improved in 14(58%) >? 10%
-Λ🐟  Up memory 288+111=399 MB
-Λ🐟  FUNCTION_ARN tuned to 399
-Λ🐟  0 53/399 MB 3.72 ms
-Λ🐟  1 53/399 MB 9.26 ms
-Λ🐟  2 53/399 MB 16.23 ms
-Λ🐟  3 53/399 MB 16.88 ms
-Λ🐟  4 53/399 MB 3.62 ms
-Λ🐟  Memory (max/cfg): 53/399 MB
-Λ🐟  Duration (avg/best): 9/10 ms
-Λ🐟  Improved in 1(10%) >? 10%
-Λ🐟  No longer improving, set to 288 and stop
-Λ🐟  FUNCTION_ARN tuned to 288
+$ ./lambda-tuna.py --arn "arn:aws:lambda:us-east-1:975034036806:function:python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ" 
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/128] 48.18 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/128] 59.39 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/128] 46.35 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/128] 137.37 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/128] 41.94 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/301] 14.02 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/301] 17.14 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/301] 4.45 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/301] 3.85 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/301] 5.87 ms / 53 MB
+Λ🐟  Less Mem(128 = 66.65) Current Mem(301 = 66.65) More Mem(302 = 9.07)
+Λ🐟  Improvement = 302
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/477] 3.93 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/477] 3.79 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/477] 3.93 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/477] 4.06 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/477] 3.98 ms / 53 MB
+Λ🐟  Less Mem(128 = 66.65) Current Mem(477 = 9.07) More Mem(477 = 3.94)
+Λ🐟  Improvement = 477
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/852] 3.92 ms / 54 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/852] 3.92 ms / 54 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/852] 3.94 ms / 54 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/852] 4.08 ms / 54 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/852] 4.24 ms / 54 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/174] 28.32 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/174] 28.37 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/174] 49.24 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/174] 39.82 ms / 53 MB
+Λ🐟  [python-fibo-iter-PythonFiboIter-115WUIZB4O5YZ/174] 25.53 ms / 53 MB
+Λ🐟  Less Mem(174 = 34.26) Current Mem(477 = 3.94) More Mem(852 = 4.02)
+Λ🐟  Improvement = None
+Λ🐟  Function tuned to 477
 ```
 
 Inspired by [alexcasalboni/aws-lambda-power-tuning](https://github.com/alexcasalboni/aws-lambda-power-tuning)
