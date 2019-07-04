@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Python Iterative Fibonacci
+Globals:
+  Function:
+    Timeout: 900
+Resources:
+  PythonFiboIter:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://julio.sandbox/99ef300c84b1712b397fe3972bc35808
+      Handler: app.lambda_handler
+      Runtime: python3.7

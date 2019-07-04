@@ -1,0 +1,15 @@
+# sam package --output-template-file packaged.yaml     --s3-bucket julio.sandbox && aws cloudformation deploy --template-file /Users/jfaerman/Dev/sandbox/fibofit/python-fibo-iter/packaged.yaml --stack-name python-fibo-iter  --capabilities CAPABILITY_IAM
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Python Iterative Fibonacci
+Globals:
+  Function:
+    Timeout: 900
+
+Resources:
+  PythonFiboIter:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: python-fibo-iter/
+      Handler: app.lambda_handler
+      Runtime: python3.7
